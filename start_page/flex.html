@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>静态网站布局练习</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      /*所有div继承父div的显示属性  */
+      div {
+        display: inherit;
+      }
+      .flex {
+        display: flex;
+      }
+      .white {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .shadow {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .navigation {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        font-size: 14px;
+        color: #666;
+      }
+      .content::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 左侧导航栏 -->
+    <div style="width: 200px; z-index: 3" class="column white shadow">
+      <!-- avater -->
+      <div
+        style="
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid #999;
+          padding: 10px;
+        "
+      >
+        <img
+          src="https://kangwenchang.com/logo.png"
+          alt="logo"
+          height="40px"
+          width="40px"
+        />
+        <div style="margin-left: 10px">康文昌</div>
+      </div>
+      <!-- navigation -->
+      <div class="navigation">导航</div>
+      <div class="navigation">导航</div>
+      <div class="navigation">导航</div>
+      <div class="navigation">导航</div>
+    </div>
+    <!-- 右侧 -->
+    <div class="flex1 column">
+      <!-- 头部栏 -->
+      <div
+        style="flex: none; height: 60px; z-index: 2"
+        class="mgr8 white shadow"
+      ></div>
+      <!--主区域  -->
+      <div style="overflow: auto; z-index: 1" class="flex1 content">
+        <!-- 左侧 -->
+        <div style="flex: 3" class="column mg8">
+          <!-- data area -->
+          <div>
+            <!-- total requests -->
+            <div style="height: 100px" class="flex1 mgr8 white shadow"></div>
+            <!--daily requests  -->
+            <div style="height: 100px" class="flex1 mgr8 white shadow"></div>
+            <!--income  -->
+            <div style="height: 100px" class="flex1 mgr8 white shadow"></div>
+            <!-- API quantity -->
+            <div style="height: 100px" class="flex1 white shadow"></div>
+          </div>
+          <!-- tables -->
+          <div class="column mgt8">
+            <!-- environment 1-->
+            <div style="height: 160px" class="white shadow"></div>
+            <!-- environment 2 -->
+            <div style="height: 160px" class="white shadow mgt8"></div>
+            <div style="height: 160px" class="white shadow mgt8"></div>
+            <div style="height: 160px" class="white shadow mgt8"></div>
+            <div style="height: 160px" class="white shadow mgt8"></div>
+            <div style="height: 160px" class="white shadow mgt8"></div>
+            <!-- new environment -->
+            <div style="height: 160px" class="white shadow mgt8"></div>
+          </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="flex1 column mgr8 mgt8">
+          <!-- hello -->
+          <div style="height: 150px" class="white"></div>
+          <!-- notice -->
+          <div style="height: 300px" class="white mgt8 shadow"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
