@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="description" content="惠大人个人导航页" />
+  <meta name="keywords" content="惠大人,开发，练习" />
+  <meta name="robots" content="index" />
+  <title>惠大人人的第一个网站</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/startPage.css" />
+  <script src="./JavaScript/startPage.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <div id="start">
+      <div id="time"></div>
+      <div id="search">
+        <div id="searchEngine">
+          <select id="searchEngineSelect" title="切换搜索引擎" style="height: 34pt;">
+            <option value="https://www.bing.com/search?q=">必应</option>
+            <option value="https://so3.cljtscd.com/scholar?q=">谷歌学术</option>
+            <option value="https://xueshu.baidu.com/s?wd=">百度学术</option>
+            <option value="https://github.com/search?q=">GitHub</option>
+            <option value="https://kaifa.baidu.com/searchPage?wd=">开发者</option>
+            <option value="https://www.google.com/search?q=">谷歌</option>
+          </select>
+        </div>
+        <div id="searchContent">
+          <input id="searchContentInput" style="width:100%;height: 30pt;" type="text" placeholder="点击输入内容..."
+            onkeydown="enter2search(event)">
+        </div>
+        <div id="searchButton" onclick="doSearch()">
+          <button id="clickHere" style="height: 35pt;width: 35pt;">搜索</button>
+        </div>
+      </div>
+    </div>
+    <div id="todo">
+      <div id="todoTitle">
+        <div id="todoState"></div>
+        <div id="todoContent"></div>
+      </div>
+      <div id="todoList"></div>
+      <div id="addTodo"></div>
+    </div>
+  </div>
+  <div id="footer">
+    <p style="font-size: small;text-align: center; color: #17c2d8;">
+      © 2023 tianzy17 |
+      <a style="color: #17c2d8;" href="http://beian.miit.gov.cn">京ICP备2023026614号</a> |
+      <a style="color: #17c2d8;" href="https://beian.mps.gov.cn/#/query/webSearch">京公网安备11010802043241号</a>
+    </p>
+  </div>
+</body>
+
+</html>

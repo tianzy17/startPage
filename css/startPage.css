@@ -1,0 +1,174 @@
+/* 基本设置 */
+body {
+    background-image: url('https://wallpapercave.com/wp/wp6351122.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+}
+
+div {
+    margin: 0;
+    display: flex;
+    z-index: 2;
+    width: 100%;
+}
+
+/**
+ * 为方便查看布局，给div全加了白色solid的border
+ * 为方便观察对齐方式给各级div插入标志
+ * 发现justify和align不能改变背景图位置，注释掉标志图
+ * 这部分样式仅用于调试，正式版将其注释掉
+ */
+/* div {
+    border: 1px solid white;
+    background-image: url(../img/fish.png);
+    background-repeat: no-repeat;
+    background-size: 70pt;
+} */
+
+/* div div {
+    background-image: url(../img/fish.png);
+    background-repeat: no-repeat;
+    background-size: 50pt;
+}
+
+div div div {
+    background-image: url(../img/fish.png);
+    background-repeat: no-repeat;
+    background-size: 10pt;
+}
+
+div div div div {
+    background-image: url(../img/fish.png);
+    background-repeat: no-repeat;
+    background-size: 30pt;
+} */
+
+/* 整个body分为上下两块 */
+#main {
+    flex-direction: row;
+    flex: 9;
+}
+
+#footer {
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 5px;
+    /* position: fixed;
+    bottom: 5px; */
+}
+
+/* main分为左右两块 */
+#start {
+    flex-direction: column;
+    flex: 9;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#todo {
+    flex: 1;
+}
+
+#todo:hover {
+    flex: 2;
+    flex-direction: column;
+}
+
+/* start分为上下两块 */
+#time {
+    font-size: 30pt;
+    color: rgb(241, 245, 246);
+    text-align: center;
+    justify-content: center;
+    height: 40pt;
+}
+
+#search {
+    flex-direction: row;
+    height: 50pt;
+    width: 90%;
+    justify-content: center;
+    /* background-color: rgb(219, 145, 188); */
+}
+
+/* search分为横向三块 */
+#searchEngine {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#searchContent {
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    flex: 3;
+}
+
+#searchButton {
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 1px;
+}
+
+/* todo分为纵向三块 */
+#todoTitle {
+    flex-direction: row;
+    height: 40pt;
+}
+
+#todoList {
+    flex-direction: column;
+    z-index: 1;
+    overflow: auto;
+}
+
+#addTodo {
+    justify-content: center;
+    height: 40pt;
+}
+
+/* todoTitle分为左右两块 */
+#todoState {
+    flex: 1;
+}
+
+#todoContent {
+    flex: 4;
+}
+
+/* todoList纵向分布一直到底，超出部分拖动滚动条查看 */
+.todoStream {
+    flex-direction: row;
+    height: 30pt;
+}
+
+/* todoStream分为左右两块 */
+.todoStreamState {
+    flex: 1;
+}
+
+.todoStreamContent {
+    flex: 4;
+}
+
+/* 复制的时钟模块
+.clocks {
+    height: 500px;
+    margin: 25px auto;
+    position: relative;
+    width: 500px;
+} */
